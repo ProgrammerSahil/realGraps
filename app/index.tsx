@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, Pressable } from 'react-native'
 import React from 'react'
+import { Link } from 'expo-router'
 
 const App = () => {
   return (
@@ -8,6 +9,11 @@ const App = () => {
       <ImageBackground style={styles.image} source={{uri: 'https://i.pinimg.com/736x/b6/e8/ee/b6e8eec8c3af2542b80e87cbe38dd597.jpg'}} resizeMode='cover'>
       <View style={styles.overlay}>
           <Text style={styles.heading}>Real Graps</Text>
+
+        <Link href={'/hangmanvdaniels'} asChild><Pressable>
+          <Text>Hangman vs daniels</Text>
+          </Pressable></Link>
+
         </View>
       </ImageBackground>
     </View>
